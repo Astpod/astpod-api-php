@@ -6,12 +6,12 @@ error_reporting(0);
 
 
 $auth="astpod";
-if (!isset($_GET['auth'])) {
+if (!isset($_GET['key'])) {
     echo json_encode(["success" => "false", "message" => "Gerçesiz Key."]);
     
     die();
-}else if($_GET['auth']!=$auth){
-    echo json_encode(["success" => "false", "message" => "Auth Error"]);
+}else if($_GET['key']!=$auth){
+    echo json_encode(["success" => "false", "message" => "Geçersiz Key."]);
    
    
     die();
